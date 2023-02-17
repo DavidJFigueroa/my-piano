@@ -14,7 +14,7 @@
   pointer-events: none;
 }
 
-.flat {
+.key.flat {
   position: relative;
   background-color: black;
   margin-left: -17px;
