@@ -1,7 +1,7 @@
 import React from "react";
 import "./Key.css";
 import _ from "lodash";
-import { NOTES } from "../global/constants.js";
+import { notes } from "../global/constants.js";
 
 // class Key extends React.Component {
 //   // noteIsFlat = (note) => {
@@ -18,29 +18,51 @@ import { NOTES } from "../global/constants.js";
 // }
 
 class Key extends React.Component {
-  // noteIsFlat = (note) => {
-  //   return note.attribute == "flat";
-  // };
   render() {
     let keyClassName = "key";
-    // const noteIsFlat = this.props.note.attribute === "flat";
-    // const noteIsFlat = this.noteIsFlat(this.props.note.attribute == "flat");
+    // const noteIsFlat = notes.filter((x) => x.attribute == "flat");
+    // console.log(noteIsFlat);
 
-    if ({ NOTES }.attribute == "flat") {
-      keyClassName += " flat";
-    }
-    let key;
+    // if (noteIsFlat) {
+    //   keyClassName += " flat";
+    // }
+    // let key;
 
-    if ({ NOTES }.attribute == "flat") {
-      key = <div className={keyClassName}></div>;
-    } else {
-      key = (
-        <div className={keyClassName}>
-          <div className="key-text">{this.props.note.toUpperCase()}</div>
+    // key = <div className={keyClassName}>
+    // {
+    //   notes
+    //     .filter((x) => x.attribute == "flat")
+    //     .map((attribute, index) => <div className={keyClassName}></div>);
+    // }
+    // </div>;
+
+    // if (noteIsFlat) {
+    //   key = <div className={keyClassName}></div>;
+    // } else {
+    //   key = (
+    //     <div className={keyClassName}>
+    //       <div className="key-text">{this.props.note.toUpperCase()}</div>
+    //     </div>
+    //   );
+    // }
+    return (
+      <div>
+        <div>
+          {notes
+            .filter((x) => x.attribute == "flat")
+            .map(() => (
+              <div className={keyClassName + " flat"}></div>
+            ))}
         </div>
-      );
-    }
-    return key;
+        <div>
+          {notes.map(() => (
+            <div className={keyClassName}>
+              <div className="key-text">{this.props.note.toUpperCase()}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
   }
 }
 

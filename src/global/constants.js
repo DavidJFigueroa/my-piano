@@ -3,18 +3,18 @@ const VALID_WHITE_KEYS = ["z", "x", "c", "v", "b", "n", "m"];
 const VALID_KEYS = [...VALID_BLACK_KEYS, ...VALID_WHITE_KEYS];
 // const NOTES = ["c", "df", "d", "ef", "e", "f", "gf", "g", "af", "a", "bf", "b"];
 
-const NOTES = [
+const notes = [
   { name: "c", attribute: "natural" },
   { name: "df", attribute: "flat" },
   { name: "d", attribute: "natural" },
-  { name: "ef", attribute: "natural" },
+  { name: "ef", attribute: "flat" },
   { name: "e", attribute: "natural" },
   { name: "f", attribute: "natural" },
-  { name: "gf", attribute: "natural" },
+  { name: "gf", attribute: "flat" },
   { name: "g", attribute: "natural" },
-  { name: "af", attribute: "natural" },
+  { name: "af", attribute: "flat" },
   { name: "a", attribute: "natural" },
-  { name: "bf", attribute: "natural" },
+  { name: "bf", attribute: "flat" },
   { name: "b", attribute: "natural" },
 ];
 
@@ -46,4 +46,4 @@ const KEY_TO_NOTE = {
   j: "bf",
   m: "b",
 };
-export { NOTES, VALID_KEYS, NOTE_TO_KEY, KEY_TO_NOTE };
+export { notes, VALID_KEYS, NOTE_TO_KEY, KEY_TO_NOTE };
